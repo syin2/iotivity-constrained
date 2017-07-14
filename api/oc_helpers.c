@@ -138,7 +138,8 @@ void
 oc_join_string_array(oc_string_array_t *ocstringarray, oc_string_t *ocstring)
 {
   size_t len = 0;
-  int i;
+  //int i;
+  size_t  i;
   for (i = 0; i < oc_string_array_get_allocated_size(*ocstringarray); i++) {
     const char *item =
       (const char *)oc_string_array_get_item(*ocstringarray, i);

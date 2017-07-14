@@ -176,7 +176,8 @@ coap_serialize_array_option(unsigned int number, unsigned int current_number,
          array);
 
   if (split_char != '\0') {
-    int j;
+    //int j;
+    size_t j;
     uint8_t *part_start = array;
     uint8_t *part_end = NULL;
     size_t temp_length;

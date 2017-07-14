@@ -138,6 +138,8 @@ oc_core_add_new_device(const char *uri, const char *rt, const char *name,
                        const char *spec_version, const char *data_model_version,
                        oc_core_add_device_cb_t add_device_cb, void *data)
 {
+
+  UNUSED(data);
 #ifndef OC_DYNAMIC_ALLOCATION
   if (device_count == OC_MAX_NUM_DEVICES) {
     OC_ERR("device limit reached\n");

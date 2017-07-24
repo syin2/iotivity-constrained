@@ -8,7 +8,7 @@ endif
 APPLICATION = ocf_app
 
 #Set RIOTBASE appropriately below.
-RIOTBASE ?= ${HOME}/RIOT/
+RIOTBASE ?= ${HOME}/riot-iotivity/
 BOARD ?= native
 
 BOARD_INSUFFICIENT_MEMORY := airfy-beacon chronos msb-430 msb-430h nrf51dongle \

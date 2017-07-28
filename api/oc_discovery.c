@@ -309,7 +309,7 @@ oc_ri_process_discovery_payload(uint8_t *payload, int len,
               case OBJECT: {
                 oc_rep_t *policy_info = resource_info->value.object;
                 while (policy_info != NULL) {
-                  if (policy_info->type == INT &&
+                  if (policy_info->type == INT_SINGLE &&
                       oc_string_len(policy_info->name) == 4 &&
                       strncmp(oc_string(policy_info->name), "port", 4) == 0) {
                     dtls_port = policy_info->value.integer;

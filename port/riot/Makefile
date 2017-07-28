@@ -8,7 +8,7 @@ endif
 APPLICATION = ocf_app
 
 #Set RIOTBASE appropriately below.
-RIOTBASE ?= ${HOME}/RIOT/
+RIOTBASE ?= ${HOME}/riot-iotivity/
 BOARD ?= native
 
 BOARD_INSUFFICIENT_MEMORY := airfy-beacon chronos msb-430 msb-430h nrf51dongle \
@@ -24,6 +24,7 @@ USEMODULE += pthread
 USEMODULE += gnrc_ndp_router
 USEMODULE += gnrc_icmpv6_echo
 USEMODULE += gnrc_ipv6_router_default
+USEMODULE += netdev_ieee802154
 #USEMODULE += gnrc_rpl
 #USEMODULE += auto_init_gnrc_rpl
 
@@ -45,6 +46,7 @@ endif
 
 ifeq ($(SERVER),1)
 	CFLAGS += -DOC_SERVER
+	#USEMODULE += netdev_ieee802154
 endif
 
 ifeq ($(SECURE),1)

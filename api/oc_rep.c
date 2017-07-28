@@ -149,7 +149,7 @@ oc_parse_rep_value(CborValue *value, oc_rep_t **rep, CborError *err)
   switch (value->type) {
   case CborIntegerType:
     *err |= cbor_value_get_int(value, &cur->value.integer);
-    cur->type = INT;
+    cur->type = INT_SINGLE;
     break;
   case CborBooleanType:
     *err |= cbor_value_get_boolean(value, &cur->value.boolean);
@@ -207,7 +207,7 @@ oc_parse_rep_value(CborValue *value, oc_rep_t **rep, CborError *err)
       case CborIntegerType:
         if (k == 0) {
           oc_new_int_array(&cur->value.array, len);
-          cur->type = INT | ARRAY;
+          cur->type = INT_SINGLE | ARRAY;
         }
         *err |= cbor_value_get_int(&array, oc_int_array(cur->value.array) + k);
         break;

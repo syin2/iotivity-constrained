@@ -67,7 +67,7 @@ post_light(oc_request_t *request, oc_interface_mask_t interface, void *user_data
       state = rep->value.boolean;
       PRINT("value: %d\n", state);
       break;
-    case INT:
+    case INT_SINGLE:
       power = rep->value.integer;
       PRINT("value: %d\n", power);
       break;

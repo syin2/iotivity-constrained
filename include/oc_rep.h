@@ -197,7 +197,7 @@ int oc_rep_finalize(void);
 
 typedef enum {
   NIL = 0,
-  INT = 0x01,
+  INT_SINGLE = 0x01,
   DOUBLE = 0x02,
   BOOL = 0x03,
   BYTE_STRING = 0x04,

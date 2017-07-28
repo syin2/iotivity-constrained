@@ -69,7 +69,7 @@ post_lights_oic_if_b(oc_client_response_t *data)
           case BOOL:
             PRINT(" %s : %d ", oc_string(rep->name), rep->value.boolean);
             break;
-          case INT:
+          case INT_SINGLE:
             PRINT(" %s : %d ", oc_string(rep->name), rep->value.integer);
             break;
           default:
@@ -116,7 +116,7 @@ get_lights_oic_if_b(oc_client_response_t *data)
           case BOOL:
             PRINT(" %s : %d ", oc_string(rep->name), rep->value.boolean);
             break;
-          case INT:
+          case INT_SINGLE:
             PRINT(" %s : %d ", oc_string(rep->name), rep->value.integer);
             break;
           default:
@@ -202,7 +202,7 @@ get_lights_oic_if_ll(oc_client_response_t *data)
           case BOOL:
             PRINT("%d ", rep->value.boolean);
             break;
-          case INT:
+          case INT_SINGLE:
             PRINT("%d ", rep->value.integer);
             break;
           case STRING:

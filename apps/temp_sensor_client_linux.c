@@ -46,7 +46,7 @@ get_temp(oc_client_response_t *data)
   while (rep != NULL) {
     PRINT("key %s, value ", oc_string(rep->name));
     switch (rep->type) {
-    case INT:
+    case INT_SINGLE:
       PRINT("%d\n", rep->value.integer);
       temperature = rep->value.integer;
       break;

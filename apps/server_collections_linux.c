@@ -67,7 +67,7 @@ post_count(oc_request_t *request, oc_interface_mask_t interface,
   while (rep != NULL) {
     PRINT("key: %s ", oc_string(rep->name));
     switch (rep->type) {
-    case INT:
+    case INT_SINGLE:
       counter = rep->value.integer;
       PRINT("value: %d\n", counter);
       break;
